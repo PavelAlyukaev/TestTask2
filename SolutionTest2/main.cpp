@@ -18,8 +18,11 @@ int main(int argc, char* argv[]) {
     auto res = GetSymmetryAxis(tmp);
 
     for (const auto &[p1, p2]: res) {
-        std::cout << p1.toString() << " | " << p2.toString() << std::endl;
+        std::cout << p1.toString() << " - " << p2.toString() << std::endl;
     }
+
+    if(res.empty())
+        std::cout<<"non-symmetric"<<std::endl;
 
     return 0;
 }
